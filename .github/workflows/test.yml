@@ -12,4 +12,4 @@ jobs:
         test-variable: [1, 3]
     steps:
       - name: test
-      - run: echo ${{ matrix.test-variable}}
+        run: echo ${{ matrix.test-variable}}
