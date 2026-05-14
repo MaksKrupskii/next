@@ -6,10 +6,8 @@ on:
 
 jobs:
   build:
+    if: ${{ github.ref == 'main' }}
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        test-variable: [1, 3]
     steps:
       - name: test
-        run: echo ${{ matrix.test-variable}}
+        run: echo ${{ github.ref }}
